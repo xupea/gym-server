@@ -8,6 +8,10 @@ var jsonfile = require('jsonfile');
 var datafile = "data.json";
 jsonfile.spaces = 2;
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
 app.use(bodyParser.json())
 
 app.get('/', function(req, res) {
@@ -22,19 +26,19 @@ app.engine('.html', ejs.__express)
 app.use(express.static(path.join(__dirname, 'client')));
 
 app.post('/gym', function(req, res) {
-    var data = req.body.data
-    console.log(data);
+    var data = req.body
+    // console.log(data)
     res.send(data);
 
     // jsonfile.readFile(datafile, function(err, obj) {
     //   console.dir(obj)
     // })
 
-    var obj = {name: 'JP2'}
-
-    jsonfile.writeFile(datafile, obj, function (err) {
-      console.error(err)
-    })
+    // var obj = {name: 'JP2'}
+    //
+    // jsonfile.writeFile(datafile, obj, function (err) {
+    //   console.error(err)
+    // })
 });
 
 /* istanbul ignore next */

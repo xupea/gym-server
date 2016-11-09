@@ -20,5 +20,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx', 'less', '.css', '.json']
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $:"jquery",
+      jQuery:"jquery",
+      "window.jQuery":"jquery"
+    })
+  ]
 }

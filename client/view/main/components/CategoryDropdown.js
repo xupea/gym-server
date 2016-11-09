@@ -40,10 +40,12 @@ class CategoryDropdown extends React.Component {
   }
 
   dropdownonSelect(eventKey, event) {
-    console.log(eventKey)
+    //console.log(eventKey)
     this.setState({
       title: eventKey.title
     })
+
+    this.props.dropdownonSelect(eventKey.title)
   }
 
   render() {

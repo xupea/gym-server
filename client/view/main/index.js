@@ -14,23 +14,83 @@ var MenuItem = require('react-bootstrap').MenuItem;
 
 var CategoryDropdown = require('./components/CategoryDropdown')
 
-
-
 var categories = ['Abs', 'Biceps', 'Calves', 'Chest',
   'Forearms', 'Glutes', 'Hamstrings', 'Lats', 'Lower Back',
   'Middle Back', 'Quads', 'Shoulders', 'Traps', 'Triceps'];
 
-var strengthType = ['Abs'];
+var strengthTypes = ['Strength'];
 
-var equipmentType = ['Bodyweight', 'Machine', 'Barbell', 'Dumbbell', 'Cable']
+var equipmentTypes = ['Bodyweight', 'Machine', 'Barbell', 'Dumbbell', 'Cable']
 
-var mechanicType = ['Isolation', 'Compound']
+var mechanicTypes = ['Isolation', 'Compound']
 
-var forceType = ['Pull', 'Push']
+var forceTypes = ['Pull', 'Push']
 
-var experienceLevel = ['Advanced', 'Intermediate', 'Beginner']
+var experienceLevels = ['Advanced', 'Intermediate', 'Beginner']
 
-var secondaryMuscle = ['Forearms', 'Lats', 'Shoulders', 'Triceps']
+var secondaryMuscles = ['Forearms', 'Lats', 'Shoulders', 'Triceps']
+
+var category
+var strengthType
+var exerciseTitle
+var equipmentType
+var mechanicType
+var forceType
+var experienceLevel
+var secondaryMuscle
+
+function categoriesSelect(data) {
+  category = data
+}
+
+function strengthSelect(data) {
+  strengthType = data
+}
+
+function equipmentSelect(data) {
+  equipmentType = data
+}
+
+function mechanicSelect(data) {
+  mechanicType = data
+}
+
+function forceSelect(data) {
+  forceType = data
+}
+
+function experienceLevelSelect(data) {
+  experienceLevel = data
+}
+
+function experienceLevelSelect(data) {
+  secondaryMuscle = data
+}
+
+function handleTitleChange(e) {
+  exerciseTitle = e.target.value
+}
+
+function createExercise() {
+  $.ajax({
+    method: "POST",
+    url: "/gym",
+    data: {
+      category: category,
+      strengthType: strengthType,
+      exerciseTitle: exerciseTitle,
+      equipmentType: equipmentType,
+      mechanicType: mechanicType,
+      forceType: forceType,
+      experienceLevel: experienceLevel,
+      secondaryMuscle: secondaryMuscle
+    },
+    dataType: 'json'
+  })
+  .done(function( msg ) {
+    alert( "Data Saved: " + msg );
+  });
+}
 
 var formInstance = (
   <Form horizontal>
@@ -39,7 +99,7 @@ var formInstance = (
         Exercise Guides Categories
       </Col>
       <Col sm={8}>
-        <CategoryDropdown dropDownOptions={categories} />
+        <CategoryDropdown dropDownOptions={categories} dropdownonSelect={categoriesSelect} />
       </Col>
     </FormGroup>
 
@@ -48,7 +108,10 @@ var formInstance = (
         Exercise Title
       </Col>
       <Col sm={8}>
-        <FormControl placeholder="Hanging Leg Raise" />
+        <FormControl placeholder="Hanging Leg Raise"
+            type="text"
+            value={exerciseTitle}
+            onChange={handleTitleChange}/>
       </Col>
     </FormGroup>
 
@@ -57,7 +120,7 @@ var formInstance = (
         Exercise TYPE
       </Col>
       <Col sm={8}>
-        <FormControl placeholder="Strength" />
+        <CategoryDropdown dropDownOptions={strengthTypes} dropdownonSelect={strengthSelect}/>
       </Col>
     </FormGroup>
 
@@ -66,7 +129,7 @@ var formInstance = (
         Equipment
       </Col>
       <Col sm={8}>
-        <CategoryDropdown dropDownOptions={equipmentType} />
+        <CategoryDropdown dropDownOptions={equipmentTypes} dropdownonSelect={equipmentSelect}/>
       </Col>
     </FormGroup>
 
@@ -75,7 +138,7 @@ var formInstance = (
         Mechanics
       </Col>
       <Col sm={8}>
-        <CategoryDropdown dropDownOptions={mechanicType} />
+        <CategoryDropdown dropDownOptions={mechanicTypes} dropdownonSelect={mechanicSelect}/>
       </Col>
     </FormGroup>
 
@@ -84,7 +147,7 @@ var formInstance = (
         Force Type
       </Col>
       <Col sm={8}>
-        <CategoryDropdown dropDownOptions={forceType} />
+        <CategoryDropdown dropDownOptions={forceTypes} dropdownonSelect={forceSelect}/>
       </Col>
     </FormGroup>
 
@@ -93,7 +156,7 @@ var formInstance = (
         Experience Level
       </Col>
       <Col sm={8}>
-        <CategoryDropdown dropDownOptions={experienceLevel} />
+        <CategoryDropdown dropDownOptions={experienceLevels} dropdownonSelect={experienceLevelSelect}/>
       </Col>
     </FormGroup>
 
@@ -108,7 +171,7 @@ var formInstance = (
 
     <FormGroup>
       <Col smOffset={4} sm={10}>
-        <Button>
+        <Button onClick={createExercise}>
           Create
         </Button>
       </Col>
