@@ -50,7 +50,7 @@ function updateExercise(value) {
   var abc = db.get('category').find({ name: value.category.toUpperCase() })
               .get('exercises').find({ id: value.exerciseTitle.split(' ').join('_') })
 
-console.log(db.get('category').find({ name: value.category.toUpperCase() }).value())
+console.log(value.secondaryMuscle)
   if(!abc.value()) {
     db.get('category').find({ name: value.category.toUpperCase() })
       .get('exercises')

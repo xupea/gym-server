@@ -67,7 +67,7 @@ function handleTitleChange(e) {
   exerciseTitle = e.target.value
 }
 
-function handleSecondaryMuscleChange() {
+function handleSecondaryMuscleChange(e) {
   secondaryMuscle = e.target.value
 }
 
