@@ -63,12 +63,12 @@ function experienceLevelSelect(data) {
   experienceLevel = data
 }
 
-function experienceLevelSelect(data) {
-  secondaryMuscle = data
-}
-
 function handleTitleChange(e) {
   exerciseTitle = e.target.value
+}
+
+function handleSecondaryMuscleChange() {
+  secondaryMuscle = e.target.value
 }
 
 function createExercise() {
@@ -165,7 +165,9 @@ var formInstance = (
         Secondary Muscle(s)
       </Col>
       <Col sm={8}>
-        <FormControl placeholder="Forearms" />
+        <FormControl placeholder="Forearms" type="text"
+          value={secondaryMuscle}
+          onChange={handleSecondaryMuscleChange}/>
       </Col>
     </FormGroup>
 

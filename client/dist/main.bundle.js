@@ -107,12 +107,12 @@
 	  experienceLevel = data;
 	}
 
-	function experienceLevelSelect(data) {
-	  secondaryMuscle = data;
-	}
-
 	function handleTitleChange(e) {
 	  exerciseTitle = e.target.value;
+	}
+
+	function handleSecondaryMuscleChange() {
+	  secondaryMuscle = e.target.value;
 	}
 
 	function createExercise() {
@@ -138,7 +138,9 @@
 	var formInstance = React.createElement(Form, { horizontal: true }, React.createElement(FormGroup, { controlId: "formHorizontalEmail2" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Exercise Guides Categories"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: categories, dropdownonSelect: categoriesSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal1" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Exercise Title"), React.createElement(Col, { sm: 8 }, React.createElement(FormControl, { placeholder: "Hanging Leg Raise",
 	  type: "text",
 	  value: exerciseTitle,
-	  onChange: handleTitleChange }))), React.createElement(FormGroup, { controlId: "formHorizontal2" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Exercise TYPE"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: strengthTypes, dropdownonSelect: strengthSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal3" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Equipment"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: equipmentTypes, dropdownonSelect: equipmentSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal4" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Mechanics"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: mechanicTypes, dropdownonSelect: mechanicSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal5" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Force Type"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: forceTypes, dropdownonSelect: forceSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal6" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Experience Level"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: experienceLevels, dropdownonSelect: experienceLevelSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal7" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Secondary Muscle(s)"), React.createElement(Col, { sm: 8 }, React.createElement(FormControl, { placeholder: "Forearms" }))), React.createElement(FormGroup, null, React.createElement(Col, { smOffset: 4, sm: 10 }, React.createElement(Button, { onClick: createExercise }, "Create"))));
+	  onChange: handleTitleChange }))), React.createElement(FormGroup, { controlId: "formHorizontal2" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Exercise TYPE"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: strengthTypes, dropdownonSelect: strengthSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal3" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Equipment"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: equipmentTypes, dropdownonSelect: equipmentSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal4" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Mechanics"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: mechanicTypes, dropdownonSelect: mechanicSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal5" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Force Type"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: forceTypes, dropdownonSelect: forceSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal6" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Experience Level"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: experienceLevels, dropdownonSelect: experienceLevelSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal7" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Secondary Muscle(s)"), React.createElement(Col, { sm: 8 }, React.createElement(FormControl, { placeholder: "Forearms", type: "text",
+	  value: secondaryMuscle,
+	  onChange: handleSecondaryMuscleChange }))), React.createElement(FormGroup, null, React.createElement(Col, { smOffset: 4, sm: 10 }, React.createElement(Button, { onClick: createExercise }, "Create"))));
 
 	var ____Class0 = React.Component;for (var ____Class0____Key in ____Class0) {
 	  if (____Class0.hasOwnProperty(____Class0____Key)) {

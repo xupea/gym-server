@@ -1,3 +1,55 @@
 {
-  "name": "JP2"
+  "category": [
+    {
+      "name": "ABS",
+      "exercises": [
+        {
+          "id": "hanging_leg_raise",
+          "exercise_profile": {
+            "main_muscle_group": "abs",
+            "exercise_type": "strength",
+            "equipment_required": "bodyweight",
+            "mechanics": "isolation",
+            "force_type": "pull",
+            "experience_level": "advanced",
+            "secondary_muscles": [
+              "forearms"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "BICEPS",
+      "exercises": [
+        {
+          "id": "Good",
+          "exercise_profile": {
+            "main_muscle_group": "Biceps",
+            "exercise_type": "Strength",
+            "equipment_required": "Bodyweight",
+            "mechanics": "Isolation",
+            "force_type": "Pull",
+            "experience_level": "Advanced",
+            "secondary_muscles": [
+              null
+            ]
+          }
+        },
+        {
+          "id": "Good_Second",
+          "exercise_profile": {
+            "main_muscle_group": "Biceps",
+            "exercise_type": "Strength",
+            "equipment_required": "Machine",
+            "mechanics": "Isolation",
+            "force_type": "Pull",
+            "secondary_muscles": [
+              "Advanced"
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

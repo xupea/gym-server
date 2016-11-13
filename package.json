@@ -22,6 +22,7 @@
     "jsx-loader": "^0.13.2",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
+    "lowdb": "^0.14.0",
     "nodemon": "^1.11.0",
     "react": "^15.3.2",
     "react-bootstrap": "^0.30.6",
