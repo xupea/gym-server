@@ -10,7 +10,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel-loader!jsx-loader?harmony'
+        loader: 'babel-loader'
       },
       {
         test: /\.less$/,

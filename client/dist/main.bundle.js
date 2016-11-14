@@ -44,7 +44,23 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {var React = __webpack_require__(2);
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // var React = require('react');
+
+
 	var ReactDOM = __webpack_require__(35);
 
 	var Form = __webpack_require__(173).Form;
@@ -135,32 +151,161 @@
 	  });
 	}
 
-	var formInstance = React.createElement(Form, { horizontal: true }, React.createElement(FormGroup, { controlId: "formHorizontalEmail2" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Exercise Guides Categories"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: categories, dropdownonSelect: categoriesSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal1" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Exercise Title"), React.createElement(Col, { sm: 8 }, React.createElement(FormControl, { placeholder: "Hanging Leg Raise",
-	  type: "text",
-	  value: exerciseTitle,
-	  onChange: handleTitleChange }))), React.createElement(FormGroup, { controlId: "formHorizontal2" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Exercise TYPE"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: strengthTypes, dropdownonSelect: strengthSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal3" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Equipment"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: equipmentTypes, dropdownonSelect: equipmentSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal4" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Mechanics"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: mechanicTypes, dropdownonSelect: mechanicSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal5" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Force Type"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: forceTypes, dropdownonSelect: forceSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal6" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Experience Level"), React.createElement(Col, { sm: 8 }, React.createElement(CategoryDropdown, { dropDownOptions: experienceLevels, dropdownonSelect: experienceLevelSelect }))), React.createElement(FormGroup, { controlId: "formHorizontal7" }, React.createElement(Col, { componentClass: ControlLabel, sm: 4 }, "Secondary Muscle(s)"), React.createElement(Col, { sm: 8 }, React.createElement(FormControl, { placeholder: "Forearms", type: "text",
-	  value: secondaryMuscle,
-	  onChange: handleSecondaryMuscleChange }))), React.createElement(FormGroup, null, React.createElement(Col, { smOffset: 4, sm: 10 }, React.createElement(Button, { onClick: createExercise }, "Create"))));
+	var formInstance = _react2.default.createElement(
+	  Form,
+	  { horizontal: true },
+	  _react2.default.createElement(
+	    FormGroup,
+	    { controlId: 'formHorizontalEmail2' },
+	    _react2.default.createElement(
+	      Col,
+	      { componentClass: ControlLabel, sm: 4 },
+	      'Exercise Guides Categories'
+	    ),
+	    _react2.default.createElement(
+	      Col,
+	      { sm: 8 },
+	      _react2.default.createElement(CategoryDropdown, { dropDownOptions: categories, dropdownonSelect: categoriesSelect })
+	    )
+	  ),
+	  _react2.default.createElement(
+	    FormGroup,
+	    { controlId: 'formHorizontal1' },
+	    _react2.default.createElement(
+	      Col,
+	      { componentClass: ControlLabel, sm: 4 },
+	      'Exercise Title'
+	    ),
+	    _react2.default.createElement(
+	      Col,
+	      { sm: 8 },
+	      _react2.default.createElement(FormControl, { placeholder: 'Hanging Leg Raise',
+	        type: 'text',
+	        value: exerciseTitle,
+	        onChange: handleTitleChange })
+	    )
+	  ),
+	  _react2.default.createElement(
+	    FormGroup,
+	    { controlId: 'formHorizontal2' },
+	    _react2.default.createElement(
+	      Col,
+	      { componentClass: ControlLabel, sm: 4 },
+	      'Exercise TYPE'
+	    ),
+	    _react2.default.createElement(
+	      Col,
+	      { sm: 8 },
+	      _react2.default.createElement(CategoryDropdown, { dropDownOptions: strengthTypes, dropdownonSelect: strengthSelect })
+	    )
+	  ),
+	  _react2.default.createElement(
+	    FormGroup,
+	    { controlId: 'formHorizontal3' },
+	    _react2.default.createElement(
+	      Col,
+	      { componentClass: ControlLabel, sm: 4 },
+	      'Equipment'
+	    ),
+	    _react2.default.createElement(
+	      Col,
+	      { sm: 8 },
+	      _react2.default.createElement(CategoryDropdown, { dropDownOptions: equipmentTypes, dropdownonSelect: equipmentSelect })
+	    )
+	  ),
+	  _react2.default.createElement(
+	    FormGroup,
+	    { controlId: 'formHorizontal4' },
+	    _react2.default.createElement(
+	      Col,
+	      { componentClass: ControlLabel, sm: 4 },
+	      'Mechanics'
+	    ),
+	    _react2.default.createElement(
+	      Col,
+	      { sm: 8 },
+	      _react2.default.createElement(CategoryDropdown, { dropDownOptions: mechanicTypes, dropdownonSelect: mechanicSelect })
+	    )
+	  ),
+	  _react2.default.createElement(
+	    FormGroup,
+	    { controlId: 'formHorizontal5' },
+	    _react2.default.createElement(
+	      Col,
+	      { componentClass: ControlLabel, sm: 4 },
+	      'Force Type'
+	    ),
+	    _react2.default.createElement(
+	      Col,
+	      { sm: 8 },
+	      _react2.default.createElement(CategoryDropdown, { dropDownOptions: forceTypes, dropdownonSelect: forceSelect })
+	    )
+	  ),
+	  _react2.default.createElement(
+	    FormGroup,
+	    { controlId: 'formHorizontal6' },
+	    _react2.default.createElement(
+	      Col,
+	      { componentClass: ControlLabel, sm: 4 },
+	      'Experience Level'
+	    ),
+	    _react2.default.createElement(
+	      Col,
+	      { sm: 8 },
+	      _react2.default.createElement(CategoryDropdown, { dropDownOptions: experienceLevels, dropdownonSelect: experienceLevelSelect })
+	    )
+	  ),
+	  _react2.default.createElement(
+	    FormGroup,
+	    { controlId: 'formHorizontal7' },
+	    _react2.default.createElement(
+	      Col,
+	      { componentClass: ControlLabel, sm: 4 },
+	      'Secondary Muscle(s)'
+	    ),
+	    _react2.default.createElement(
+	      Col,
+	      { sm: 8 },
+	      _react2.default.createElement(FormControl, { placeholder: 'Forearms', type: 'text',
+	        value: secondaryMuscle,
+	        onChange: handleSecondaryMuscleChange })
+	    )
+	  ),
+	  _react2.default.createElement(
+	    FormGroup,
+	    null,
+	    _react2.default.createElement(
+	      Col,
+	      { smOffset: 4, sm: 10 },
+	      _react2.default.createElement(
+	        Button,
+	        { onClick: createExercise },
+	        'Create'
+	      )
+	    )
+	  )
+	);
 
-	var ____Class0 = React.Component;for (var ____Class0____Key in ____Class0) {
-	  if (____Class0.hasOwnProperty(____Class0____Key)) {
-	    GYMForm[____Class0____Key] = ____Class0[____Class0____Key];
+	var GYMForm = function (_React$Component) {
+	  _inherits(GYMForm, _React$Component);
+
+	  function GYMForm(props) {
+	    _classCallCheck(this, GYMForm);
+
+	    return _possibleConstructorReturn(this, (GYMForm.__proto__ || Object.getPrototypeOf(GYMForm)).call(this, props));
 	  }
-	}var ____SuperProtoOf____Class0 = ____Class0 === null ? null : ____Class0.prototype;GYMForm.prototype = Object.create(____SuperProtoOf____Class0);GYMForm.prototype.constructor = GYMForm;GYMForm.__superConstructor__ = ____Class0;
 
-	function GYMForm(props) {
-	  "use strict";
+	  _createClass(GYMForm, [{
+	    key: 'render',
+	    value: function render() {
+	      return formInstance;
+	    }
+	  }]);
 
-	  ____Class0.call(this, props);
-	}
+	  return GYMForm;
+	}(_react2.default.Component);
 
-	Object.defineProperty(GYMForm.prototype, "render", { writable: true, configurable: true, value: function () {
-	    "use strict";
-
-	    return formInstance;
-	  } });
-
-	ReactDOM.render(React.createElement(GYMForm, null), document.getElementById('main-container'));
+	ReactDOM.render(_react2.default.createElement(GYMForm, null), document.getElementById('main-container'));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
@@ -30714,7 +30859,7 @@
 	  Array.from(iter);
 	}), 'Array', {
 	  // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
-	  from: function from(arrayLike /* mapfn = undefined, thisArg = undefined*/) {
+	  from: function from(arrayLike /*, mapfn = undefined, thisArg = undefined*/) {
 	    var O = toObject(arrayLike),
 	        C = typeof this == 'function' ? this : Array,
 	        aLen = arguments.length,
@@ -41766,6 +41911,16 @@
 /* 425 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 	var React = __webpack_require__(2);
 
 	var Col = __webpack_require__(173).Col;
@@ -41777,61 +41932,73 @@
 	var ButtonToolbar = __webpack_require__(173).ButtonToolbar;
 	var MenuItem = __webpack_require__(173).MenuItem;
 
-	var ____Class1 = React.Component;for (var ____Class1____Key in ____Class1) {
-	  if (____Class1.hasOwnProperty(____Class1____Key)) {
-	    CategoryDropdown[____Class1____Key] = ____Class1[____Class1____Key];
-	  }
-	}var ____SuperProtoOf____Class1 = ____Class1 === null ? null : ____Class1.prototype;CategoryDropdown.prototype = Object.create(____SuperProtoOf____Class1);CategoryDropdown.prototype.constructor = CategoryDropdown;CategoryDropdown.__superConstructor__ = ____Class1;
+	var CategoryDropdown = function (_React$Component) {
+	  _inherits(CategoryDropdown, _React$Component);
 
-	function CategoryDropdown(props) {
-	  "use strict";
+	  function CategoryDropdown(props) {
+	    _classCallCheck(this, CategoryDropdown);
 
-	  ____Class1.call(this, props);
-	  this.state = {
-	    title: 'Default'
-	  };
+	    var _this = _possibleConstructorReturn(this, (CategoryDropdown.__proto__ || Object.getPrototypeOf(CategoryDropdown)).call(this, props));
 
-	  this.renderDropdown = this.renderDropdown.bind(this);
-	  this.generateKey = this.generateKey.bind(this);
-	  this.dropdownonSelect = this.dropdownonSelect.bind(this);
-	}
-
-	Object.defineProperty(CategoryDropdown.prototype, "renderDropdown", { writable: true, configurable: true, value: function (title, i) {
-	    "use strict";
-
-	    return React.createElement(MenuItem, { eventKey: this.generateKey(title), key: title,
-	      id: 'id-' + title,
-	      onSelect: this.dropdownonSelect }, title);
-	  } });
-
-	Object.defineProperty(CategoryDropdown.prototype, "generateKey", { writable: true, configurable: true, value: function (value) {
-	    "use strict";
-
-	    return {
-	      id: value.split(' ').map(function (currentValue, index, array) {
-	        return currentValue.toLowerCase();
-	      }).join('_'),
-	      title: value
+	    _this.state = {
+	      title: 'Default'
 	    };
-	  } });
 
-	Object.defineProperty(CategoryDropdown.prototype, "dropdownonSelect", { writable: true, configurable: true, value: function (eventKey, event) {
-	    "use strict";
-	    //console.log(eventKey)
+	    _this.renderDropdown = _this.renderDropdown.bind(_this);
+	    _this.generateKey = _this.generateKey.bind(_this);
+	    _this.dropdownonSelect = _this.dropdownonSelect.bind(_this);
+	    return _this;
+	  }
 
-	    this.setState({
-	      title: eventKey.title
-	    });
+	  _createClass(CategoryDropdown, [{
+	    key: 'renderDropdown',
+	    value: function renderDropdown(title, i) {
+	      return React.createElement(
+	        MenuItem,
+	        { eventKey: this.generateKey(title), key: title,
+	          id: 'id-' + title,
+	          onSelect: this.dropdownonSelect },
+	        title
+	      );
+	    }
+	  }, {
+	    key: 'generateKey',
+	    value: function generateKey(value) {
+	      return {
+	        id: value.split(' ').map(function (currentValue, index, array) {
+	          return currentValue.toLowerCase();
+	        }).join('_'),
+	        title: value
+	      };
+	    }
+	  }, {
+	    key: 'dropdownonSelect',
+	    value: function dropdownonSelect(eventKey, event) {
+	      //console.log(eventKey)
+	      this.setState({
+	        title: eventKey.title
+	      });
 
-	    this.props.dropdownonSelect(eventKey.title);
-	  } });
+	      this.props.dropdownonSelect(eventKey.title);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return React.createElement(
+	        ButtonToolbar,
+	        null,
+	        React.createElement(
+	          DropdownButton,
+	          { bsStyle: 'default',
+	            title: this.state.title, id: 'myDropdownButton', key: '0-gym' },
+	          this.props.dropDownOptions.map(this.renderDropdown)
+	        )
+	      );
+	    }
+	  }]);
 
-	Object.defineProperty(CategoryDropdown.prototype, "render", { writable: true, configurable: true, value: function () {
-	    "use strict";
-
-	    return React.createElement(ButtonToolbar, null, React.createElement(DropdownButton, { bsStyle: "default",
-	      title: this.state.title, id: "myDropdownButton", key: "0-gym" }, this.props.dropDownOptions.map(this.renderDropdown)));
-	  } });
+	  return CategoryDropdown;
+	}(React.Component);
 
 	module.exports = CategoryDropdown;
 

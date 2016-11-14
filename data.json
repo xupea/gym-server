@@ -52,6 +52,32 @@
           }
         }
       ]
+    },
+    {
+      "name": "Calves",
+      "title": "Calves",
+      "cropdPic": "assets/img/taxonomy/exercises/musclegroups/crop/Calves.jpg",
+      "fullPic": "assets/img/taxonomy/exercises/musclegroups/full/Calves-full.jpg",
+      "exercises": [
+        {
+          "id": "Goog_Googgg",
+          "title": "Goog Googgg",
+          "video_poster": "assets/video/googgooggg.jpg",
+          "video_src": "assets/video/googgooggg.mp4",
+          "exercise_profile": {
+            "main_muscle_group": "Calves",
+            "exercise_type": "Strength",
+            "equipment_required": "Bodyweight",
+            "mechanics": "Isolation",
+            "force_type": "Pull",
+            "experience_level": "Advanced",
+            "secondary_muscles": [
+              "nice",
+              "try"
+            ]
+          }
+        }
+      ]
     }
   ]
 }

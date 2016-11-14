@@ -40,22 +40,33 @@ app.post('/gym', function(req, res) {
 });
 
 function updateCategory(value) {
+  var filename = value.category.split(' ').join('-')
   return {
-    "name": value.category.toUpperCase(),
+    "name": value.category,
+    "title": value.category,
+    "cropdPic": "assets/img/taxonomy/exercises/musclegroups/crop/" + filename + ".jpg",
+    "fullPic": "assets/img/taxonomy/exercises/musclegroups/full/" + filename + "-full.jpg",
     "exercises": []
   }
 }
 
 function updateExercise(value) {
-  var abc = db.get('category').find({ name: value.category.toUpperCase() })
+  var abc = db.get('category').find({ name: value.category })
               .get('exercises').find({ id: value.exerciseTitle.split(' ').join('_') })
 
-console.log(value.secondaryMuscle)
+
+  var exerciseId = value.exerciseTitle.split(' ').map(function(obj) {
+    return obj.toLowerCase()
+  }).join('')
+
   if(!abc.value()) {
-    db.get('category').find({ name: value.category.toUpperCase() })
+    db.get('category').find({ name: value.category })
       .get('exercises')
       .push({
         "id": value.exerciseTitle.split(' ').join('_'),
+        "title": value.exerciseTitle,
+        "video_poster": "assets/video/" + exerciseId + ".jpg",
+        "video_src": "assets/video/" + exerciseId + ".mp4",
         "exercise_profile": {
           "main_muscle_group": value.category,
           "exercise_type": value.strengthType,
@@ -68,10 +79,13 @@ console.log(value.secondaryMuscle)
       })
       .value()
   }else {
-    db.get('category').find({ name: value.category.toUpperCase() })
+    db.get('category').find({ name: value.category })
       .get('exercises').find({ id: value.exerciseTitle.split(' ').join('_') })
       .assign({
         "id": value.exerciseTitle.split(' ').join('_'),
+        "title": value.exerciseTitle,
+        "video_poster": "assets/video/" + exerciseId + ".jpg",
+        "video_src": "assets/video/" + exerciseId + ".mp4",
         "exercise_profile": {
           "main_muscle_group": value.category,
           "exercise_type": value.strengthType,
