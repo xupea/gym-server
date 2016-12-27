@@ -1,1 +1,49 @@
+{
+  "exercise": {
+    "category": {
+      "ABS": {
+        "TITLE": "腹肌"
+      },
+      "BICEPS": {
+        "TITLE": "肱二头肌"
+      },
+      "CALVES": {
+        "TITLE": "小腿"
+      },
+      "CHEST": {
+        "TITLE": "胸肌"
+      },
+      "FOREARMS": {
+        "TITLE": "前臂"
+      },
+      "GLUTES": {
+        "TITLE": "臀大肌"
+      },
+      "HAMSTRINGS": {
+        "TITLE": "腘绳肌"
+      },
+      "LATS": {
+        "TITLE": "背阔肌"
+      },
+      "LOWER BACK": {
+        "TITLE": "竖脊肌"
+      },
+      "MIDDLE BACK": {
+        "TITLE": "下斜方肌"
+      },
+      "QUADS": {
+        "TITLE": "肌四头肌"
+      },
+      "SHOULDERS": {
+        "TITLE": "肩部/三角肌"
+      },
+      "TRAPS": {
+        "TITLE": "上斜方肌"
+      },
+      "TRICEPS": {
+        "TITLE": "肱三头肌"
+      }
+    }
+  }
+}
 
