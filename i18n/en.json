@@ -1,1 +1,45 @@
-
+{
+  "exercise": {
+    "category": {
+      "ABS": {
+        "TITLE": "ABS"
+      },
+      "BICEPS": {
+        "TITLE": "BICEPS"
+      },
+      "CALVES": {
+        "TITLE": "CALVES"
+      },
+      "CHEST": {
+        "TITLE": "CHEST"
+      },
+      "FOREARMS": {
+        "TITLE": "FOREARMS"
+      },
+      "HAMSTRINGS": {
+        "TITLE": "HAMSTRINGS"
+      },
+      "LATS": {
+        "TITLE": "LATS"
+      },
+      "LOWER BACK": {
+        "TITLE": "LOWER BACK"
+      },
+      "MIDDLE BACK": {
+        "TITLE": "MIDDLE BACK"
+      },
+      "QUADS": {
+        "TITLE": "QUADS"
+      },
+      "SHOULDERS": {
+        "TITLE": "SHOULDERS"
+      },
+      "TRAPS": {
+        "TITLE": "TRAPS"
+      },
+      "TRICEPS": {
+        "TITLE": "TRICEPS"
+      }
+    }
+  }
+}
